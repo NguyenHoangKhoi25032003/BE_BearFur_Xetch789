@@ -1,0 +1,155 @@
+/* Modal nền đen mờ */
+.modal {
+  display: none; /* Ẩn mặc định */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+/* Nội dung hộp modal */
+.modal-content {
+  background-color: #fff;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 95%;
+  padding: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+  transform: scale(1);
+}
+
+/* Nút đóng */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Ảnh sản phẩm */
+.modal-image {
+  flex: 1;
+}
+
+.modal-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Thông tin sản phẩm */
+.modal-info {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-info h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.modal-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.modal-price .old-price {
+  text-decoration: line-through;
+  font-size: 14px;
+  color: #999;
+  margin-left: 8px;
+}
+
+.modal-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Số lượng */
+.modal-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.modal-quantity button {
+  background: #eee;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.modal-quantity button:hover {
+  background: #ccc;
+}
+
+#modal-quantity {
+  font-size: 16px;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Nút thêm vào giỏ */
+.add-to-cart-btn {
+  margin-top: 12px;
+  background-color: #f5a06d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e2884c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+    padding: 16px;
+  }
+}

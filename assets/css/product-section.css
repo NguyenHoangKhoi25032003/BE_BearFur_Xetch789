@@ -1,0 +1,176 @@
+.grid-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+   
+
+}
+
+.grid-row-1 {
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    margin-top: 20px;
+}
+
+.grid-row-2 {
+    grid-template-columns: 2fr 1fr 2fr;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 15px;
+    min-height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    color: #000;
+    z-index: 1;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, background-position 0.3s ease;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.card a {
+    margin-top: auto;
+    display: inline-block;
+    color: #b92727;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Phóng to nhẹ */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Thêm bóng đổ */
+    filter: brightness(1.1);
+    /* Tăng độ sáng nhẹ */
+    background-position: calc(50% - 10px) calc(50% - 10px);
+    /* Di chuyển hình nền lên trên và sang trái 10px */
+    background-size: 110%;
+}
+
+
+.card a::before {
+    content: "";
+    display: inline-block;
+    border: 2px solid #999;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Màu nền và hình ảnh cho từng card */
+.card1 {
+    background-color: #f0ece3;
+    /* background-image: url('/assets/img/cate_1_img.webp'); */
+}
+
+.card2 {
+    background-color: #c9e7f1;
+    /* background-image: url('assets/img/cate_2_img.webp'); */
+}
+
+.card3 {
+    background-color: #cfd8d8;
+    /* background-image: url('assets/img/cate_3_img.webp'); */
+}
+
+.card4 {
+    background-color: #e8ded2;
+    /* background-image: url('assets/img/cate_4_img.webp'); */
+}
+
+.card5 {
+    background-color: #f2f2f2;
+    /* background-image: url('assets/img/cate_6_img.webp'); */
+}
+
+.card6 {
+    background-color: #ece5dc;
+    /* background-image: url('assets/img/cate_5_img.webp'); */
+}
+
+.card7 {
+    background-color: #f6f6f6;
+    /* background-image: url('assets/img/cate_7_img.webp'); */
+}
+.card a {
+      display: inline-flex;
+      align-items: center;
+      width: 160px;
+      color: #4a4a4a; /* Màu chữ xám đậm */
+      padding: 8px 15px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      position: relative;
+      transition: background-color 0.3s ease;
+    }
+
+    .card a::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 2px solid #4a4a4a; /* Màu viền tròn */
+      border-radius: 50%;
+      margin-right: 10px;
+      border-top-color: transparent; /* Tạo hiệu ứng đường tròn không khép kín */
+      border-right-color: transparent;
+      transition: transform 0.3s ease;
+    }
+
+   
+
+    .card a:hover::before {
+      transform: rotate(180deg); /* Xoay tròn khi hover để tạo hiệu ứng động */
+    }
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .grid-row-1 {
+        grid-template-columns: 2fr 1fr 1fr;
+        /* Giảm xuống 3 cột */
+    }
+
+    .grid-row-2 {
+        grid-template-columns: 2fr 1fr;
+        /* Giảm xuống 2 cột */
+    }
+}
+
+@media (max-width: 600px) {
+
+    .grid-row-1,
+    .grid-row-2 {
+        grid-template-columns: 1fr;
+        /* 1 cột trên mobile */
+    }
+
+    .card {
+        min-height: 200px;
+        background-size: cover;
+        /* Đã có cover ở trên, giữ nguyên */
+        background-position: center;
+    }
+}

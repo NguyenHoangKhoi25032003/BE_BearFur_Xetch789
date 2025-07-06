@@ -1,0 +1,152 @@
+.review-section {
+    max-width: 95%;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.review-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.review-left {
+    flex: 1;
+    min-width: 280px;
+}
+
+.review-title {
+    margin-bottom: 20px;
+}
+
+.review-title h2 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.review-title p {
+    color: #555;
+    font-size: 15px;
+}
+
+.review-title span {
+    color: #f5a06d;
+    font-weight: bold;
+}
+
+.review-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 280px;
+}
+
+.review-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    padding: 16px;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.review-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.review-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-info h4 {
+    color: #f26b35;
+    margin: 0;
+    font-size: 16px;
+}
+
+.review-info small {
+    color: #666;
+    font-size: 13px;
+    display: block;
+    margin: 2px 0 10px;
+}
+
+.review-info p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.review-info .quote {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #2f3542;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .review-wrapper {
+        flex-direction: column;
+    }
+
+    .review-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .review-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .review-info {
+        align-items: center;
+    }
+
+    .review-info h4,
+    .review-info small,
+    .review-info p {
+        text-align: center;
+    }
+
+    .review-info .quote {
+        text-align: center;
+    }
+}
+
+.review-title {
+    margin-bottom: 20px;
+}
+
+.review-title h2 {
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.review-title p {
+    font-size: 16px;
+    color: #777;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.review-title span {
+    color: #f26b35;
+    /* hoặc #f5a06d */
+    font-weight: 100;
+}

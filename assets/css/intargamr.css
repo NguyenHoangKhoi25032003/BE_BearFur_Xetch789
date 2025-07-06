@@ -1,0 +1,126 @@
+    .insta-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .insta-section h2 {
+      font-size: 18px;
+      font-weight: normal;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .insta-section span {
+      color: #f5a06d;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .insta-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .insta-item {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .insta-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .insta-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .insta-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .insta-item:hover .insta-overlay {
+      opacity: 1;
+    }
+
+    .insta-overlay img {
+      width: 32px;
+      height: 32px;
+    }
+
+   /* Instagram Gallery */
+@media (max-width: 768px) {
+  .insta-gallery {
+    display: flex;
+    flex-wrap: nowrap; /* Ngăn các mục xuống dòng để giữ chúng trong một hàng */
+    overflow-x: auto; /* Bật cuộn ngang */
+    gap: 12px; /* Giảm khoảng cách để phù hợp hơn trên di động */
+    justify-content: flex-start; /* Căn chỉnh các mục về phía đầu */
+    padding-bottom: 10px; /* Tùy chọn: Thêm padding cho thanh cuộn */
+    scroll-snap-type: x mandatory; /* Tùy chọn: Tạo hiệu ứng cuộn dính cho trải nghiệm người dùng tốt hơn */
+  }
+
+  .insta-item {
+    flex: 0 0 45vw; /* Mỗi mục chiếm 45% chiều rộng khung nhìn */
+    height: 45vw;
+    scroll-snap-align: start; /* Tùy chọn: Căn chỉnh các mục theo điểm dính */
+  }
+}
+
+@media (max-width: 480px) {
+  .insta-gallery {
+    gap: 8px; /* Giảm khoảng cách hơn nữa cho màn hình nhỏ */
+  }
+
+  .insta-item {
+    flex: 0 0 80vw; /* Tăng kích thước mục để dễ xem trên màn hình nhỏ */
+    height: 80vw;
+  }
+}
+
+/* Review Grid */
+@media (max-width: 768px) {
+  .review-grid {
+    display: flex;
+    flex-wrap: nowrap; /* Ngăn các mục xuống dòng để giữ trong một hàng */
+    overflow-x: auto; /* Bật cuộn ngang */
+    gap: 12px; /* Khoảng cách giữa các thẻ */
+    justify-content: flex-start; /* Căn chỉnh các mục về phía đầu */
+    scroll-snap-type: x mandatory; /* Tùy chọn: Tạo hiệu ứng cuộn dính */
+  }
+
+  .review-card {
+    flex: 0 0 80vw; /* Mỗi thẻ chiếm 80% chiều rộng khung nhìn */
+    scroll-snap-align: start; /* Tùy chọn: Căn chỉnh các mục theo điểm dính */
+  }
+
+  .review-card img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .review-content {
+    padding: 16px;
+  }
+}

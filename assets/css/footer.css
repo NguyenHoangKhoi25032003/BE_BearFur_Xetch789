@@ -1,0 +1,150 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 30px;
+    }
+
+    .footer-col {
+      flex: 1 1 220px;
+      min-width: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .footer-col h4 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    .footer-col p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .footer-col a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .footer-col a:hover {
+      color: #f5a06d;
+      text-decoration: underline;
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .footer-icons a {
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-bottom: 15px;
+      margin-top: 5px;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .newsletter-form button {
+      padding: 10px 18px;
+      border: none;
+      background-color: #f5a06d;
+      color: white;
+      font-weight: bold;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .payment-methods {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .payment-methods img {
+      height: 30px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #444;
+      text-align: center;
+      color: #ccc;
+      font-size: 13px;
+      margin-top: 30px;
+      padding-top: 15px;
+    }
+
+    .highlight-orange {
+      color: #f5a06d;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form input,
+      .newsletter-form button {
+        border-radius: 4px;
+        width: 100%;
+      }
+
+      .newsletter-form button {
+        margin-top: 10px;
+      }
+
+      .payment-methods {
+        justify-content: flex-start;
+      }
+    }
+
+

@@ -1,0 +1,130 @@
+.about-hero {
+  /* background-image: url('/assets/img/breadcrumb.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+/* Nếu bạn muốn làm ảnh tối nhẹ để chữ dễ đọc hơn */
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #f58c40; /* Màu cam nổi bật */
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 16px;
+  color: #fff;
+  margin: 0;
+}
+
+.about-hero a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.about-hero span {
+  color: #fdd9c0;
+}
+.about-content {
+  width: 100vw;
+  margin: auto;
+}
+.container {
+  margin-bottom: 20px;
+}
+.about-content {
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.about-content .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', 'Roboto', 'Inter', sans-serif;
+  font-size: 17px;
+  color: #333;
+  line-height: 1.8;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+}
+
+.about-content strong {
+  color: #222;
+  font-weight: 600;
+}
+/* Responsive cho ảnh và bố cục */
+.about-content img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 28px;
+  }
+
+  .about-hero p {
+    font-size: 14px;
+  }
+
+  .about-content {
+    padding: 40px 15px;
+  }
+
+  .about-content .container {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    height: 180px;
+    padding: 10px;
+  }
+
+  .about-hero h1 {
+    font-size: 24px;
+  }
+
+  .about-hero p {
+    font-size: 12px;
+  }
+
+  .about-content {
+    padding: 30px 10px;
+  }
+
+  .about-content .container {
+    font-size: 14px;
+  }
+}

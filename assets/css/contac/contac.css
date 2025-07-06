@@ -1,0 +1,168 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+
+  background: #fff;
+}
+
+.about-hero {
+  background-image: url('assets/img/breadcrumb.jpg');
+  /* ✅ Đường dẫn ảnh nền */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+/* Nếu bạn muốn làm ảnh tối nhẹ để chữ dễ đọc hơn */
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  /* lớp phủ đen mờ */
+  z-index: 1;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #f58c40;
+  /* Màu cam nổi bật */
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 16px;
+  color: #fff;
+  margin: 0;
+}
+
+.about-hero a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.about-hero span {
+  color: #fdd9c0;
+}
+.contact-section {
+  max-width: 90vw;
+
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.contact-left {
+  flex: 1 1 500px;
+}
+
+.contact-right {
+  flex: 1 1 600px;
+  min-height: 00px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #222;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.desc {
+  margin: 10px 0 20px;
+  color: #555;
+}
+
+.info-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  flex: 1 1 200px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.info-item i {
+  font-size: 20px;
+  color: #f58c40;
+  margin-top: 4px;
+}
+
+.info-item div {
+  font-size: 15px;
+  color: #333;
+}
+
+.info-item b {
+  display: block;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+textarea {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.btn_send {
+  padding: 10px 20px;
+  background: #f58c40;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.btn_send:hover {
+  background: #f26b35;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+  }
+}

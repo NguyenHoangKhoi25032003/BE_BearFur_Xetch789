@@ -1,0 +1,265 @@
+.decor-page {
+  width: 90vw;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.decor-title-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: flex; /* Add flex to control layout */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  align-items: center;
+}
+
+span {
+  font-size: clamp(1.5rem, 5vw, 1.8rem);
+
+  display: inline-block;
+}
+
+.decor-nav-buttons {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.decor-nav-btn {
+  background: none;
+  border: none;
+  font-size: clamp(1.2rem, 4vw, 1.4rem);
+  cursor: pointer;
+  padding: 0.5rem;
+  touch-action: manipulation; /* Improves mobile touch */
+}
+
+#safe-product-list-decor,
+#product-list-decor {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  white-space: nowrap !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 80vh !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  scroll-behavior: smooth !important;
+  -webkit-overflow-scrolling: touch !important; /* Smooth scrolling on iOS */
+}
+
+#safe-product-list-decor > div,
+#product-list-decor > div {
+  display: inline-flex !important;
+  vertical-align: top !important;
+  width: clamp(200px, 30vw, 260px) !important;
+  max-width: 260px !important;
+  flex: 0 0 clamp(200px, 30vw, 260px) !important;
+  margin: 0 !important;
+  padding: 0 0.5rem !important;
+}
+
+#safe-product-list-decor .prod-card,
+#product-list-decor .prod-card {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  position: relative !important;
+  background: #fff !important;
+  border: 1px solid #ddd !important;
+  border-radius: 0.5rem !important;
+  overflow: hidden !important; /* Ngăn nội dung tràn ra ngoài */
+  contain: content !important;
+}
+
+#safe-product-list-decor .prod-discount,
+#product-list-decor .prod-discount {
+  position: absolute !important;
+  top: 0.5rem !important;
+  left: 0.5rem !important;
+  background: #ff5722 !important;
+  color: #fff !important;
+  padding: 0.3rem 0.6rem !important;
+  border-radius: 0.25rem !important;
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem) !important;
+}
+
+#safe-product-list-decor .prod-img-top,
+#product-list-decor .prod-img-top {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important; /* Maintain square image ratio */
+  object-fit: cover !important;
+  transition: opacity 0.3s !important;
+}
+
+#safe-product-list-decor .prod-icons,
+#product-list-decor .prod-icons {
+  position: absolute !important;
+  top: 0.5rem !important;
+  right: 0.5rem !important;
+  display: flex !important;
+  gap: 0.3rem !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+#safe-product-list-decor .prod-card:hover .prod-icons,
+#product-list-decor .prod-card:hover .prod-icons {
+  opacity: 1 !important;
+}
+
+#safe-product-list-decor .prod-card:hover .prod-img-top,
+#product-list-decor .prod-card:hover .prod-img-top {
+  opacity: 0.8 !important;
+}
+
+#safe-product-list-decor .prod-btn,
+#product-list-decor .prod-btn {
+  background: rgba(255, 165, 0, 1) !important;
+  color: #0c0b0b !important;
+  border: none !important;
+  padding: 0.6rem !important;
+  border-radius: 0.3rem !important;
+  cursor: pointer !important;
+  font-size: clamp(0.875rem, 3vw, 1rem) !important;
+  transition: background 0.3s !important;
+  touch-action: manipulation !important;
+}
+
+#safe-product-list-decor .prod-btn:hover,
+#product-list-decor .prod-btn:hover {
+  color: white !important;
+  background: rgba(255, 165, 0, 0.9) !important;
+}
+
+#safe-product-list-decor .decor-prod-info,
+#product-list-decor .decor-prod-info {
+  padding: 0.6rem !important;
+  flex-grow: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  overflow: hidden !important; /* Ngăn tràn */
+  max-width: 100% !important; /* Giới hạn chiều rộng */
+}
+
+#safe-product-list-decor .prod-new-label,
+#product-list-decor .prod-new-label {
+  color: #ff9800 !important;
+  font-size: clamp(0.625rem, 2vw, 0.75rem) !important;
+  text-transform: uppercase !important;
+}
+
+#safe-product-list-decor .decor-prod-name,
+#product-list-decor .decor-prod-name {
+  font-size: clamp(0.875rem, 3vw, 1rem) !important;
+  font-weight: 400 !important;
+  margin: 0.3rem 0 !important;
+  color: #333 !important;
+  overflow-wrap: break-word !important; /* Ngắt từ khi cần */
+  word-break: break-word !important; /* Hỗ trợ ngắt từ */
+  white-space: normal !important; /* Cho phép xuống hàng */
+  line-height: 1.2 !important; /* Điều chỉnh khoảng cách dòng */
+  max-width: 100% !important; /* Giới hạn chiều rộng tối đa */
+}
+
+#safe-product-list-decor .decor-prod-description,
+#product-list-decor .decor-prod-description {
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem) !important;
+  color: #666 !important;
+  margin: 0.3rem 0 !important;
+  flex-grow: 1 !important;
+  overflow-wrap: break-word !important; /* Ngắt từ khi cần */
+  word-break: break-word !important; /* Hỗ trợ ngắt từ */
+  white-space: normal !important; /* Cho phép xuống hàng */
+  line-height: 1.2 !important; /* Điều chỉnh khoảng cách dòng */
+  max-width: 100% !important; /* Giới hạn chiều rộng tối đa */
+}
+
+#safe-product-list-decor .prod-price,
+#product-list-decor .prod-price {
+  font-size: clamp(0.875rem, 3vw, 1rem) !important;
+  color: #ff5722 !important;
+  font-weight: 600 !important;
+  margin: 0.3rem 0 !important;
+
+  white-space: nowrap !important; /* Giữ giá trên một dòng */
+  overflow: hidden !important; /* Ngăn tràn nếu quá dài */
+  text-overflow: ellipsis !important; /* Cắt bớt nếu tràn với dấu ... */
+}
+
+#safe-product-list-decor .prod-original-price,
+#product-list-decor .prod-original-price {
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem) !important;
+  color: #999 !important;
+  text-decoration: line-through !important;
+  margin-left: 0.5rem !important;
+  white-space: nowrap !important;
+}
+
+/* Hide scrollbar but keep functionality */
+#safe-product-list-decor,
+#product-list-decor {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+#safe-product-list-decor::-webkit-scrollbar,
+#product-list-decor::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Image transition effect */
+.decor-image-transition {
+  opacity: 0.8 !important;
+  transition: opacity 0.3s !important;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .decor-page {
+    width: 95vw;
+    padding: 0 0.5rem;
+  }
+
+  /* .decor-nav-buttons {
+        position: static;
+        transform: none;
+        justify-content: flex-end;
+        margin-top: 0.5rem;
+    } */
+
+  #safe-product-list-decor > div,
+  #product-list-decor > div {
+    width: clamp(160px, 45vw, 200px) !important;
+    flex: 0 0 clamp(160px, 45vw, 200px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .decor-title-wrapper {
+    text-align: center;
+  }
+  .decor-nav-buttons {
+    justify-content: center; /* Căn giữa các nút trên màn hình nhỏ */
+  }
+  #safe-product-list-decor > div,
+  #product-list-decor > div {
+    width: clamp(140px, 50vw, 160px) !important;
+    flex: 0 0 clamp(140px, 50vw, 160px) !important;
+    padding: 0 0.3rem !important;
+  }
+
+  .decor-nav-btn {
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
+}

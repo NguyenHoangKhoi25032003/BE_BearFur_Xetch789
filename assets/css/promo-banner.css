@@ -1,0 +1,158 @@
+/* Banner tổng thể */
+.promo-banner {
+  width: 100vw;
+  position: relative;
+  padding: 40px 0;
+  min-height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+/* Ảnh nền */
+.promo-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transition: background-image 1s ease;
+  background-image: url('/kholanh1/assets/img/slider_2.webp');
+}
+
+/* Nội dung khối trái */
+.promo-content {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(148, 144, 144, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.5s, transform 0.5s;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: auto;
+}
+
+.promo-content h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.promo-content h2 {
+  color: #f4a261;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.promo-content p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.btn {
+  background-color: #f4a261;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e07a5f;
+}
+
+/* Ảnh bên phải */
+.promo-image {
+  height: auto;
+  width: 100%;
+  max-width: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('/kholanh1/assets/img/cate_1_img.webp');
+  z-index: 1;
+}
+
+/* Layout flex row */
+.row.align-items-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
+  z-index: 1;
+  width: 100%;
+  max-width: 100vw;
+  padding: 0 15px;
+  margin: auto;
+}
+.promo-content {
+  margin-right: 600px;
+}
+
+@media (min-width: 769px)
+{
+  .promo-content {
+    margin-left: 100px;
+  }
+}
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .promo-banner {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .promo-content {
+    padding: 30px 20px;
+    text-align: center;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .promo-content h1 {
+    font-size: 1.8em;
+  }
+
+  .promo-image {
+    max-width: 200px;
+    margin-top: 20px;
+  }
+
+  .row.align-items-center {
+    justify-content: center;
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .promo-content {
+    max-width: 100%;
+    padding: 35px 25px;
+  }
+
+  .promo-image {
+    max-width: 250px;
+  }
+
+  .promo-banner {
+    min-height: 350px;
+  }
+}

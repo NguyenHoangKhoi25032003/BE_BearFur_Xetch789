@@ -1,0 +1,1 @@
+//<![CDATA[$(document).on('click', '.action-delete', function(){    if (!confirm("Bạn có thật sự muốn xóa bộ sưu tập này?\nNếu đồng ý, tất cả dữ liệu liên quan sẽ bị xóa. Bạn sẽ không thể phục hồi lại chúng sau này!")){        return false;    }});//]]>

@@ -1,0 +1,359 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+
+  background: #fff;
+}
+
+.about-hero {
+  background-image: url('/assets/img/breadcrumb.jpg');
+  /* ✅ Đường dẫn ảnh nền */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+/* Nếu bạn muốn làm ảnh tối nhẹ để chữ dễ đọc hơn */
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #f58c40;
+  /* Màu cam nổi bật */
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 16px;
+  color: #fff;
+  margin: 0;
+}
+
+.about-hero a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.about-hero span {
+  color: #fdd9c0;
+}
+.contact-section {
+  max-width: 90vw;
+
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.login-tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.login-tabs .tab {
+  padding: 10px 30px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.login-tabs .tab.active {
+  color: #f4a261;
+  border-color: #f4a261;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.auth-container h2 {
+  text-align: center;
+  color: #000;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-container input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-container button {
+  background-color: #f4a261;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  opacity: 0.9;
+}
+
+.extra-links {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.social-login a {
+  flex: 1;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-login .facebook {
+  background-color: #3b5998;
+}
+
+.social-login .google {
+  background-color: #dd4b39;
+}
+/* Tabs trên cùng */
+.login-tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.login-tabs .tab {
+  padding: 12px 32px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.login-tabs .tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background-color: #f4a261;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.login-tabs .tab:hover {
+  color: #f4a261;
+}
+
+.login-tabs .tab:hover::after,
+.login-tabs .tab.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.login-tabs .tab.active {
+  color: #f4a261;
+}
+
+/* Container chính */
+.auth-container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Form style */
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-container input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-container input:focus {
+  border-color: #f4a261;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.2);
+}
+
+/* Nút đăng nhập */
+.auth-container button {
+  background: linear-gradient(135deg, #f4a261, #e76f51);
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.auth-container button:hover {
+  background: linear-gradient(135deg, #e76f51, #f4a261);
+  transform: scale(1.02);
+}
+
+/* Liên kết phụ */
+.extra-links {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.extra-links a {
+  color: #666;
+  text-decoration: none;
+}
+
+.extra-links a:hover {
+  color: #f4a261;
+}
+
+/* Mạng xã hội */
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.social-login a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.social-login .facebook {
+  background-color: #3b5998;
+}
+
+.social-login .google {
+  background-color: #dd4b39;
+}
+
+.social-login a:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .auth-container {
+    margin: 20px auto;
+    padding: 20px 15px;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  .auth-container h2 {
+    font-size: 20px;
+  }
+
+  .auth-container input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .auth-container button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .login-tabs {
+    flex-direction: row;
+    font-size: 14px;
+  }
+
+  .login-tabs .tab {
+    padding: 10px 20px;
+  }
+
+  .social-login {
+    flex-direction: column;
+  }
+
+  .social-login a {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-tabs {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-tabs .tab {
+    width: auto !important;
+    text-align: center;
+  }
+}

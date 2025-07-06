@@ -1,0 +1,131 @@
+/* SECTION CHÍNH */
+.news-section {
+  max-width: 90%;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.news-section h2 {
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.news-section .subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* DESKTOP - mỗi hàng 3 cột */
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+
+}
+
+/* CARD CHUNG */
+.news-card {
+  background: rgba(248, 237, 237, 0);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+}
+
+.news-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+  border-radius: 16px;
+}
+
+.news-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease; /* Hiệu ứng mượt */
+}
+
+.news-card:hover .news-image-wrapper img {
+  transform: scale(1.1); /* Phóng to ảnh thêm 10% khi hover */
+}
+
+/* PHẦN NỘI DUNG nổi lên ảnh */
+.news-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  margin: -40px 20px 20px 20px; /* Đẩy lên ảnh */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 2;
+  height: 250px;
+}
+
+.news-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.news-date {
+  display: inline-block;
+  background-color: #f5a06d;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.news-description {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  border-top: 1px solid #f5a06d;
+  padding-top: 12px;
+  text-align: left;
+  max-height: 85px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* MOBILE - GỘP 2 danh sách thành 1 hàng ngang */
+@media (max-width: 768px) {
+  .news-section {
+    padding: 0 12px;
+  }
+
+  .news-list {
+    display: flex !important;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .news-card {
+    min-width: 270px;
+    flex: 0 0 auto;
+  }
+}
