@@ -7,3 +7,4 @@ ERROR - 2025-07-06 09:21:40 --> Severity: Warning --> Undefined variable $logged
 ERROR - 2025-07-06 09:21:52 --> Severity: Warning --> Undefined variable $logged_in D:\xappm\htdocs\kholanh1\application\modules\layout\views\site\layout_bearfur.php 146
 ERROR - 2025-07-06 09:22:01 --> Severity: Warning --> Undefined variable $logged_in D:\xappm\htdocs\kholanh1\application\modules\layout\views\site\layout_bearfur.php 146
 ERROR - 2025-07-06 09:27:09 --> Severity: Warning --> Undefined variable $logged_in D:\xappm\htdocs\kholanh1\application\modules\layout\views\site\layout_bearfur.php 146
+ERROR - 2025-07-06 11:01:11 --> 404 Page Not Found: 

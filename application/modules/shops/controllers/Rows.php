@@ -936,7 +936,7 @@ class Rows extends Layout {
         modules::run('users/require_logged_in');
 
         redirect(site_url('quan-ly-san-pham'));
-        
+
         $user_id = $this->_data['userid'];
         $shop_status = get_user_shop_status($user_id);
         if($shop_status == NULL || $shop_status != 1){
@@ -951,7 +951,7 @@ class Rows extends Layout {
             $this->set_notify($notify_type, $notify_content);
             redirect(site_url($this->_module_slug));
         }
-        
+
         $row = $this->get($id);
         if (is_array($row) && !empty($row)) {
             if ($this->M_shops_collection->delete($id)) {
@@ -1336,7 +1336,7 @@ class Rows extends Layout {
         $in_prices = NULL;
         if(trim($price) != ''){
             $in_prices = array($price);
-            $arr_price = explode('_', $price);            
+            $arr_price = explode('_', $price);
             if(isset($arr_price[0]) && (int) $arr_price[0] > 0){
                 $args['price_start'] = (int) $arr_price[0];
             }
@@ -1555,7 +1555,7 @@ class Rows extends Layout {
         $in_prices = NULL;
         if(trim($price) != ''){
             $in_prices = array($price);
-            $arr_price = explode('_', $price);            
+            $arr_price = explode('_', $price);
             if(isset($arr_price[0]) && (int) $arr_price[0] > 0){
                 $args['price_start'] = (int) $arr_price[0];
             }
@@ -1863,7 +1863,7 @@ class Rows extends Layout {
             $in_prices = NULL;
             if(trim($price) != ''){
                 $in_prices = array($price);
-                $arr_price = explode('_', $price);            
+                $arr_price = explode('_', $price);
                 if(isset($arr_price[0]) && (int) $arr_price[0] > 0){
                     $args['price_start'] = (int) $arr_price[0];
                 }
@@ -2058,7 +2058,7 @@ class Rows extends Layout {
         $in_prices = NULL;
         if(trim($price) != ''){
             $in_prices = array($price);
-            $arr_price = explode('_', $price);            
+            $arr_price = explode('_', $price);
             if(isset($arr_price[0]) && (int) $arr_price[0] > 0){
                 $args['price_start'] = (int) $arr_price[0];
             }
@@ -2241,7 +2241,7 @@ class Rows extends Layout {
         $in_prices = NULL;
         if(trim($price) != ''){
             $in_prices = array($price);
-            $arr_price = explode('_', $price);            
+            $arr_price = explode('_', $price);
             if(isset($arr_price[0]) && (int) $arr_price[0] > 0){
                 $args['price_start'] = (int) $arr_price[0];
             }
@@ -2300,7 +2300,7 @@ class Rows extends Layout {
 
         $offset = ($this->uri->segment($segment) == '') ? 0 : $this->uri->segment($segment);
         $rows = $this->M_shops_rows->gets($args, $perpage, $offset);
-        
+
         $this->_data['rows'] = $rows;
 
         $this->_breadcrumbs[] = array(
@@ -2371,7 +2371,7 @@ class Rows extends Layout {
             ->setCellValue('K1', 'Ngày cập nhật');
         $args = $this->default_args();
         $rows = $this->M_shops_rows->gets($args);
-        
+
         $i = 2;
         $order = 0;
         if (is_array($rows) && !empty($rows)) {

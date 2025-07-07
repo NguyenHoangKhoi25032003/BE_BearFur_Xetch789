@@ -54,37 +54,36 @@
                             <div class="dropdown-column">
                                 <span class="column-title">Đèn trang trí</span>
                                 <ul>
-                                    <li><a href="<?php echo base_url('product?category=Đèn trang trí&type=Đèn chùm'); ?>">Đèn chùm</a></li>
-                                    <li><a href="<?php echo base_url('product?category=Đèn trang trí&type=Đèn âm trần'); ?>">Đèn âm trần</a></li>
-                                    <li><a href="<?php echo base_url('product?category=Đèn trang trí&type=Đèn thả trần'); ?>">Đèn thả trần</a></li>
-                                    <li><a href="<?php echo base_url('product?category=Đèn trang trí&type=Đèn cây - đèn bàn'); ?>">Đèn cây - đèn bàn</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=5'); ?>">Đèn âm trần</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=6'); ?>">Đèn thả trần</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=7'); ?>">Đèn cây - đèn bàn</a></li>
                                 </ul>
                             </div>
                             <div class="dropdown-column">
                                 <span class="column-title">Đồ trang trí</span>
                                 <ul>
-                                    <li><a href="<?php echo base_url('product?category=Đồ trang trí&type=Kệ sách'); ?>">Kệ sách</a></li>
-                                    <li><a href="<?php echo base_url('product?category=Đồ trang trí&type=Đồng hồ treo tường'); ?>">Đồng hồ treo tường</a></li>
-                                    <li><a href="<?php echo base_url('product?category=Đồ trang trí&type=Bàn ghế Sofa'); ?>">Bàn ghế Sofa</a></li>
-                                    <li><a href="<?php echo base_url('product?category=Đồ trang trí&type=Khung tranh ảnh'); ?>">Khung tranh ảnh</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=8'); ?>">Kệ sách</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=9'); ?>">Đồng hồ treo tường</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=10'); ?>">Bàn ghế Sofa</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=11'); ?>">Khung tranh ảnh</a></li>
                                 </ul>
                             </div>
                             <div class="dropdown-column">
                                 <span class="column-title">Đồ nội thất</span>
                                 <ul>
-                                    <li><a href="<?php echo base_url('product?category=Đồ nội thất&type=Nội thất phòng khách'); ?>">Nội thất phòng khách</a></li>
-                                    <li><a href="<?php echo base_url('product?category=Đồ nội thất&type=Nội thất phòng bếp'); ?>">Nội thất phòng bếp</a></li>
-                                    <li><a href="<?php echo base_url('product?category=Đồ nội thất&type=Nội thất phòng ngủ'); ?>">Nội thất phòng ngủ</a></li>
-                                    <li><a href="<?php echo base_url('product?category=Đồ nội thất&type=Nội thất phòng tắm'); ?>">Nội thất phòng tắm</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=12'); ?>">Nội thất phòng khách</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=13'); ?>">Nội thất phòng bếp</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=14'); ?>">Nội thất phòng ngủ</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=15'); ?>">Nội thất phòng tắm</a></li>
                                 </ul>
                             </div>
                             <div class="dropdown-column">
                                 <span class="column-title">Thiết bị vệ sinh</span>
                                 <ul>
-                                    <li><a href="<?php echo base_url('product?category=Thiết bị vệ sinh&type=Bồn tắm'); ?>">Bồn tắm</a></li>
-                                    <li><a href="<?php echo base_url('product?category=Thiết bị vệ sinh&type=Vòi sen'); ?>">Vòi sen</a></li>
-                                    <li><a href="<?php echo base_url('product?category=Thiết bị vệ sinh&type=Vòi Lavabo'); ?>">Vòi Lavabo</a></li>
-                                    <li><a href="<?php echo base_url('product?category=Thiết bị vệ sinh&type=Chậu Lavabo'); ?>">Chậu Lavabo</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=16'); ?>">Bồn tắm</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=17'); ?>">Vòi sen</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=18'); ?>">Vòi Lavabo</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=19'); ?>">Chậu Lavabo</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -106,10 +105,26 @@
                             <li><a href="<?php echo base_url('introduce'); ?>">Giới Thiệu</a></li>
                             <li class="modal-dropdown">
                                 <div class="modal-product-toggle">
-                                    <a href="<?php echo base_url('product'); ?>" class="modal-title-link">Sản Phẩm</a>
+                                    <span class="modal-title-link">Sản Phẩm</span>
                                     <span class="toggle-icon">+</span>
                                 </div>
-                                <ul class="modal-sub-menu"></ul>
+                                <ul class="modal-sub-menu">
+                                    <li><a href="<?php echo base_url('product?catid=5'); ?>">Đèn âm trần</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=6'); ?>">Đèn thả trần</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=7'); ?>">Đèn cây - đèn bàn</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=8'); ?>">Kệ sách</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=9'); ?>">Đồng hồ treo tường</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=10'); ?>">Bàn ghế Sofa</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=11'); ?>">Khung tranh ảnh</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=12'); ?>">Nội thất phòng khách</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=13'); ?>">Nội thất phòng bếp</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=14'); ?>">Nội thất phòng ngủ</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=15'); ?>">Nội thất phòng tắm</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=16'); ?>">Bồn tắm</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=17'); ?>">Vòi sen</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=18'); ?>">Vòi Lavabo</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=19'); ?>">Chậu Lavabo</a></li>
+                                </ul>
                             </li>
                             <li><a href="<?php echo base_url('system'); ?>">Hệ Thống</a></li>
                             <li><a href="<?php echo base_url('news'); ?>">Tin Tức</a></li>

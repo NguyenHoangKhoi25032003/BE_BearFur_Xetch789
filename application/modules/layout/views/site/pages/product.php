@@ -1,6 +1,7 @@
 <?php /* Trang sản phẩm BearFur */ ?>
 <?php
-// Copy nội dung từ BearFur_Xtech789/product.html vào đây và sửa đường dẫn asset nếu có
+// Sử dụng biến $products nếu có, fallback về $all_products nếu không có
+$product_list = isset($products) ? $products : (isset($all_products) ? $all_products : []);
 ?>
 <!-- Nội dung trang sản phẩm sẽ được đặt ở đây -->
 
@@ -9,10 +10,22 @@
   style="background-image: url('<?php echo base_url('assets/img/breadcrumb.jpg'); ?>')"
 >
   <div class="about-hero-content">
-    <h1 id="hero-title">Tất cả sản phẩm</h1>
+    <h1 id="hero-title">
+      <?php
+        if (!empty($category) && !empty($type)) echo htmlspecialchars($type) . ' - ' . htmlspecialchars($category);
+        elseif (!empty($category)) echo htmlspecialchars($category);
+        else echo "Tất cả sản phẩm";
+      ?>
+    </h1>
     <p>
       <a href="<?php echo base_url(); ?>">Trang chủ</a> &nbsp;›&nbsp;
-      <span id="breadcrumb-title">Tất cả sản phẩm</span>
+      <span id="breadcrumb-title">
+        <?php
+          if (!empty($category) && !empty($type)) echo htmlspecialchars($type) . ' - ' . htmlspecialchars($category);
+          elseif (!empty($category)) echo htmlspecialchars($category);
+          else echo "Tất cả sản phẩm";
+        ?>
+      </span>
     </p>
   </div>
 </section>
@@ -22,46 +35,50 @@
       <h3 class="widget-title">DANH MỤC SẢN PHẨM</h3>
       <ul class="category-list">
         <li class="category-item">
-          <div class="category-header" data-category="Đèn trang trí">
-            Đèn trang trí <span class="toggle">+</span>
+          <div class="category-header">
+            <a href="<?php echo base_url('product?catid=1'); ?>">Đèn trang trí</a>
+            <span class="toggle">+</span>
           </div>
           <ul class="subcategory-list">
-            <li class="subcategory-item" data-category="Đèn trang trí" data-type="Đèn chùm">Đèn chùm</li>
-            <li class="subcategory-item" data-category="Đèn trang trí" data-type="Đèn âm trần">Đèn âm trần</li>
-            <li class="subcategory-item" data-category="Đèn trang trí" data-type="Đèn thả trần">Đèn thả trần</li>
-            <li class="subcategory-item" data-category="Đèn trang trí" data-type="Đèn cây - đèn bàn">Đèn cây - đèn bàn</li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=5'); ?>">Đèn âm trần</a></li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=6'); ?>">Đèn thả trần</a></li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=7'); ?>">Đèn cây - đèn bàn</a></li>
           </ul>
         </li>
         <li class="category-item">
-          <div class="category-header" data-category="Đồ trang trí">
-            Đồ trang trí <span class="toggle">+</span>
+          <div class="category-header">
+            <a href="<?php echo base_url('product?catid=2'); ?>">Đồ trang trí</a>
+            <span class="toggle">+</span>
           </div>
           <ul class="subcategory-list">
-            <li class="subcategory-item" data-category="Đồ trang trí" data-type="Kệ sách">Kệ sách</li>
-            <li class="subcategory-item" data-category="Đồ trang trí" data-type="Đồng hồ treo tường">Đồng hồ treo tường</li>
-            <li class="subcategory-item" data-category="Đồ trang trí" data-type="Bàn ghế Sofa">Bàn ghế Sofa</li>
-            <li class="subcategory-item" data-category="Đồ trang trí" data-type="Khung tranh ảnh">Khung tranh ảnh</li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=8'); ?>">Kệ sách</a></li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=9'); ?>">Đồng hồ treo tường</a></li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=10'); ?>">Bàn ghế Sofa</a></li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=11'); ?>">Khung tranh ảnh</a></li>
           </ul>
         </li>
         <li class="category-item">
-          <div class="category-header" data-category="Đồ nội thất">
-            Đồ nội thất <span class="toggle">+</span>
+          <div class="category-header">
+            <a href="<?php echo base_url('product?catid=3'); ?>">Đồ nội thất</a>
+            <span class="toggle">+</span>
           </div>
           <ul class="subcategory-list">
-            <li class="subcategory-item" data-category="Đồ nội thất" data-type="Nội thất phòng khách">Nội thất phòng khách</li>
-            <li class="subcategory-item" data-category="Đồ nội thất" data-type="Nội thất phòng bếp">Nội thất phòng bếp</li>
-            <li class="subcategory-item" data-category="Đồ nội thất" data-type="Nội thất phòng ngủ">Nội thất phòng ngủ</li>
-            <li class="subcategory-item" data-category="Đồ nội thất" data-type="Nội thất phòng tắm">Nội thất phòng tắm</li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=12'); ?>">Nội thất phòng khách</a></li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=13'); ?>">Nội thất phòng bếp</a></li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=14'); ?>">Nội thất phòng ngủ</a></li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=15'); ?>">Nội thất phòng tắm</a></li>
           </ul>
         </li>
         <li class="category-item">
-          <div class="category-header" data-category="Thiết bị vệ sinh">
-            Thiết bị vệ sinh <span class="toggle">+</span>
+          <div class="category-header">
+            <a href="<?php echo base_url('product?catid=4'); ?>">Thiết bị vệ sinh</a>
+            <span class="toggle">+</span>
           </div>
           <ul class="subcategory-list">
-            <li class="subcategory-item" data-category="Thiết bị vệ sinh" data-type="Bồn tắm">Bồn tắm</li>
-            <li class="subcategory-item" data-category="Thiết bị vệ sinh" data-type="Vòi sen">Vòi sen</li>
-            <li class="subcategory-item" data-category="Thiết bị vệ sinh" data-type="Vòi Lavabo">Vòi Lavabo</li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=16'); ?>">Bồn tắm</a></li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=17'); ?>">Vòi sen</a></li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=18'); ?>">Vòi Lavabo</a></li>
+            <li class="subcategory-item"><a href="<?php echo base_url('product?catid=19'); ?>">Chậu Lavabo</a></li>
           </ul>
         </li>
       </ul>
@@ -126,7 +143,13 @@
   </div>
   <div class="product-main">
     <div class="product-header">
-      <h2 id="section-title">TẤT CẢ SẢN PHẨM</h2>
+      <h2 id="section-title">
+        <?php
+          if (!empty($category) && !empty($type)) echo htmlspecialchars($type) . ' - ' . htmlspecialchars($category);
+          elseif (!empty($category)) echo htmlspecialchars($category);
+          else echo "Tất cả sản phẩm";
+        ?>
+      </h2>
       <div class="sort">
         <i class="bi bi-filter"></i> Sắp xếp:
         <select id="sortSelect" class="op">
@@ -137,8 +160,9 @@
       </div>
     </div>
     <div id="product-list" class="product-list">
-      <?php if (!empty($all_products)): ?>
-        <?php foreach ($all_products as $product): ?>
+      <?php if (!empty($product_list)): ?>
+        <?php foreach ($product_list as $product): ?>
+          <?php $alias = !empty($product['alias']) ? $product['alias'] : url_title($product['title'], 'dash', true); ?>
           <div class="product-card"
                data-price="<?php echo $product['product_sales_price'] ?? $product['product_price']; ?>"
                data-category="<?php echo $product['listcatid']; ?>"
@@ -152,9 +176,8 @@
                 <img src="<?php echo base_url('uploads/shops/' . $product['homeimgalt']); ?>" alt="<?php echo htmlspecialchars($product['title']); ?>" class="hover">
               <?php endif; ?>
               <div class="product-icons">
-              <button class="icon-btn" title="Thêm vào giỏ"><i class="bi bi-cart"></i></button>
-                <button class="icon-btn" title="Xem chi tiết"><i class="bi bi-search"></i></button>
-
+              <button class="icon-btn" title="Thêm vào giỏ" data-product-id="<?php echo $product['id']; ?>"><i class="bi bi-cart"></i></button>
+                <button class="icon-btn" title="Xem chi tiết" data-product-id="<?php echo $product['id']; ?>" data-product-alias="<?php echo $alias; ?>"><i class="bi bi-search"></i></button>
               </div>
             </div>
             <div class="product-info">
@@ -177,3 +200,29 @@
     <div id="pagination" class="pagination"></div>
   </div>
 </div>
+
+<script>
+document.querySelectorAll('.category-header .toggle').forEach(function(toggleBtn) {
+  toggleBtn.addEventListener('click', function() {
+    var subList = this.parentElement.nextElementSibling;
+    if (subList && subList.classList.contains('subcategory-list')) {
+      if (subList.style.display === 'block') {
+        subList.style.display = 'none';
+        this.textContent = '+';
+      } else {
+        subList.style.display = 'block';
+        this.textContent = '-';
+      }
+    }
+  });
+});
+// Ẩn tất cả danh mục khi bấm "Ẩn tất cả danh mục"
+document.querySelector('.toggle-all')?.addEventListener('click', function() {
+  document.querySelectorAll('.subcategory-list').forEach(function(list) {
+    list.style.display = 'none';
+  });
+  document.querySelectorAll('.category-header .toggle').forEach(function(btn) {
+    btn.textContent = '+';
+  });
+});
+</script>

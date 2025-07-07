@@ -29,9 +29,9 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/main.css'); ?>" />
     <link rel="stylesheet" href="<?php echo base_url('assets/css/promo-banner.css'); ?>" />
     <link rel="stylesheet" href="<?php echo base_url('assets/css/product-section.css'); ?>" />
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/sales.css'); ?>" />
     <link rel="stylesheet" href="<?php echo base_url('assets/css/product_sales.css'); ?>" />
     <link rel="stylesheet" href="<?php echo base_url('assets/css/product_top.css'); ?>" />
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/product/product.css'); ?>" />
     <link rel="stylesheet" href="<?php echo base_url('assets/css/decor.css'); ?>" />
     <link rel="stylesheet" href="<?php echo base_url('assets/css/decor-page.css'); ?>" />
     <link rel="stylesheet" href="<?php echo base_url('assets/css/footer.css'); ?>" />
@@ -64,42 +64,42 @@
                     <li><a href="<?php echo base_url('introduce'); ?>">Giới thiệu</a></li>
                     <li class="dropdown">
 
-                        <a href="<?php echo base_url('san-pham'); ?>">Sản phẩm <span class="arrow-icon"><svg width="14" height="8" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L9 9L17 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></a>
+                        <a href="<?php echo base_url('product'); ?>">Sản phẩm <span class="arrow-icon"><svg width="14" height="8" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L9 9L17 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></a>
                         <div class="dropdown-menu">
                             <div class="dropdown-column">
-                                <span class="column-title">Đèn trang trí</span>
+                                <span class="column-title"><a href="<?php echo base_url('product?catid=1'); ?>">Đèn trang trí</a></span>
                                 <ul>
-                                    <li><a href="<?php echo base_url('san-pham?category=Đèn trang trí&type=Đèn chùm'); ?>">Đèn chùm</a></li>
-                                    <li><a href="<?php echo base_url('san-pham?category=Đèn trang trí&type=Đèn âm trần'); ?>">Đèn âm trần</a></li>
-                                    <li><a href="<?php echo base_url('san-pham?category=Đèn trang trí&type=Đèn thả trần'); ?>">Đèn thả trần</a></li>
-                                    <li><a href="<?php echo base_url('san-pham?category=Đèn trang trí&type=Đèn cây - đèn bàn'); ?>">Đèn cây - đèn bàn</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=4'); ?>">Đèn chùm</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=5'); ?>">Đèn âm trần</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=6'); ?>">Đèn thả trần</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=7'); ?>">Đèn cây - đèn bàn</a></li>
                                 </ul>
                             </div>
                             <div class="dropdown-column">
-                                <span class="column-title">Đồ trang trí</span>
+                                <span class="column-title"><a href="<?php echo base_url('product?catid=2'); ?>">Đồ trang trí</a></span>
                                 <ul>
-                                    <li><a href="<?php echo base_url('san-pham?category=Đồ trang trí&type=Kệ sách'); ?>">Kệ sách</a></li>
-                                    <li><a href="<?php echo base_url('san-pham?category=Đồ trang trí&type=Đồng hồ treo tường'); ?>">Đồng hồ treo tường</a></li>
-                                    <li><a href="<?php echo base_url('san-pham?category=Đồ trang trí&type=Bàn ghế Sofa'); ?>">Bàn ghế Sofa</a></li>
-                                    <li><a href="<?php echo base_url('san-pham?category=Đồ trang trí&type=Khung tranh ảnh'); ?>">Khung tranh ảnh</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=8'); ?>">Kệ sách</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=9'); ?>">Đồng hồ treo tường</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=10'); ?>">Bàn ghế Sofa</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=11'); ?>">Khung tranh ảnh</a></li>
                                 </ul>
                             </div>
                             <div class="dropdown-column">
-                                <span class="column-title">Đồ nội thất</span>
+                                <span class="column-title"><a href="<?php echo base_url('product?catid=3'); ?>">Đồ nội thất</a></span>
                                 <ul>
-                                    <li><a href="<?php echo base_url('san-pham?category=Đồ nội thất&type=Nội thất phòng khách'); ?>">Nội thất phòng khách</a></li>
-                                    <li><a href="<?php echo base_url('san-pham?category=Đồ nội thất&type=Nội thất phòng bếp'); ?>">Nội thất phòng bếp</a></li>
-                                    <li><a href="<?php echo base_url('san-pham?category=Đồ nội thất&type=Nội thất phòng ngủ'); ?>">Nội thất phòng ngủ</a></li>
-                                    <li><a href="<?php echo base_url('san-pham?category=Đồ nội thất&type=Nội thất phòng tắm'); ?>">Nội thất phòng tắm</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=12'); ?>">Nội thất phòng khách</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=13'); ?>">Nội thất phòng bếp</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=14'); ?>">Nội thất phòng ngủ</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=15'); ?>">Nội thất phòng tắm</a></li>
                                 </ul>
                             </div>
                             <div class="dropdown-column">
-                                <span class="column-title">Thiết bị vệ sinh</span>
+                                <span class="column-title"><a href="<?php echo base_url('product?catid=4'); ?>">Thiết bị vệ sinh</a></span>
                                 <ul>
-                                    <li><a href="<?php echo base_url('san-pham?category=Thiết bị vệ sinh&type=Bồn tắm'); ?>">Bồn tắm</a></li>
-                                    <li><a href="<?php echo base_url('san-pham?category=Thiết bị vệ sinh&type=Vòi sen'); ?>">Vòi sen</a></li>
-                                    <li><a href="<?php echo base_url('san-pham?category=Thiết bị vệ sinh&type=Vòi Lavabo'); ?>">Vòi Lavabo</a></li>
-                                    <li><a href="<?php echo base_url('san-pham?category=Thiết bị vệ sinh&type=Chậu Lavabo'); ?>">Chậu Lavabo</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=16'); ?>">Bồn tắm</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=17'); ?>">Vòi sen</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=18'); ?>">Vòi Lavabo</a></li>
+                                    <li><a href="<?php echo base_url('product?catid=19'); ?>">Chậu Lavabo</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -121,7 +121,7 @@
                             <li><a href="<?php echo base_url('introduce'); ?>">Giới Thiệu</a></li>
                             <li class="modal-dropdown">
                                 <div class="modal-product-toggle">
-                                    <a href="<?php echo base_url('san-pham'); ?>" class="modal-title-link">Sản Phẩm</a>
+                                    <a href="<?php echo base_url('product'); ?>" class="modal-title-link">Sản Phẩm</a>
                                     <span class="toggle-icon">+</span>
                                 </div>
                                 <ul class="modal-sub-menu"></ul>

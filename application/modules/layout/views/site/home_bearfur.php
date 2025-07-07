@@ -200,6 +200,64 @@ $sanitary_products = $promo_products;
 .decor-page .decor-carousel > div {
   padding: 0 2px !important;
 }
+
+.product-icons .icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: #fff;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  color: #f5a06d;
+  font-size: 20px;
+  margin-left: 0;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.product-icons .icon-btn i.fa-shopping-cart {
+  transform: translateY(2px);
+}
+.product-icons .icon-btn i.fa-search {
+  transform: translateY(2px);
+
+}
+.new-label {
+  display: inline-block;
+  background: #ff9800;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 1.2;
+  min-width: unset;
+  width: auto;
+  margin-bottom: 4px;
+  box-shadow: none;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.product-info .new-label {
+  display: inline-block !important;
+  width: auto !important;
+  min-width: unset !important;
+  max-width: 100%;
+  margin-bottom: 4px;
+  box-shadow: none;
+  background: #ff9800;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
 </style>
 
 <!-- Sản phẩm khuyến mãi -->
@@ -234,7 +292,8 @@ $sanitary_products = $promo_products;
                         <button class="icon-btn add-to-cart" title="Thêm vào giỏ" data-product-id="<?php echo $product['id']; ?>">
                           <i class="fa fa-shopping-cart"></i>
                         </button>
-                        <button class="icon-btn quick-view" title="Xem nhanh" data-product-id="<?php echo $product['id']; ?>">
+                        <?php $alias = !empty($product['alias']) ? $product['alias'] : url_title($product['title'], 'dash', true); ?>
+                        <button class="icon-btn quick-view" title="Xem nhanh" data-product-id="<?php echo $product['id']; ?>" data-product-alias="<?php echo $alias; ?>">
                           <i class="fa fa-search"></i>
                         </button>
                       </div>
@@ -296,7 +355,8 @@ $sanitary_products = $promo_products;
                     <button class="icon-btn add-to-cart" title="Thêm vào giỏ" data-product-id="<?php echo $product['id']; ?>">
                       <i class="fa fa-shopping-cart"></i>
                     </button>
-                    <button class="icon-btn quick-view" title="Xem nhanh" data-product-id="<?php echo $product['id']; ?>">
+                    <?php $alias = !empty($product['alias']) ? $product['alias'] : url_title($product['title'], 'dash', true); ?>
+                    <button class="icon-btn quick-view" title="Xem nhanh" data-product-id="<?php echo $product['id']; ?>" data-product-alias="<?php echo $alias; ?>">
                       <i class="fa fa-search"></i>
                     </button>
                   </div>
@@ -351,7 +411,8 @@ $sanitary_products = $promo_products;
                             <button class="icon-btn add-to-cart" title="Thêm vào giỏ" data-product-id="<?php echo $product['id']; ?>">
                               <i class="fa fa-shopping-cart"></i>
                             </button>
-                            <button class="icon-btn quick-view" title="Xem nhanh" data-product-id="<?php echo $product['id']; ?>">
+                            <?php $alias = !empty($product['alias']) ? $product['alias'] : url_title($product['title'], 'dash', true); ?>
+                            <button class="icon-btn quick-view" title="Xem nhanh" data-product-id="<?php echo $product['id']; ?>" data-product-alias="<?php echo $alias; ?>">
                               <i class="fa fa-search"></i>
                             </button>
                           </div>

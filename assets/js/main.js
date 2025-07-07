@@ -87,23 +87,38 @@ document.querySelector('.toggle-icon').addEventListener('click', (e) => {
   }
 });
 
-// ✅ Tạo từng mục danh mục lớn + con
+// Ánh xạ tên loại sang id (bổ sung đủ các loại)
+const typeIdMap = {
+  'Đèn âm trần': 5,
+  'Đèn thả trần': 6,
+  'Đèn cây - đèn bàn': 7,
+  'Kệ sách': 8,
+  'Đồng hồ treo tường': 9,
+  'Bàn ghế Sofa': 10,
+  'Khung tranh ảnh': 11,
+  'Nội thất phòng khách': 12,
+  'Nội thất phòng bếp': 13,
+  'Nội thất phòng ngủ': 14,
+  'Nội thất phòng tắm': 15,
+  'Bồn tắm': 16,
+  'Vòi sen': 17,
+  'Vòi Lavabo': 18,
+  'Chậu Lavabo': 19
+};
+
+// ✅ Tạo từng mục danh mục lớn + con (cho mobile menu)
 function generateCategoryItem(category, subItems) {
   const subList = subItems
     .map(
       (item) =>
-        `<li><a href="product.html?subcategory=${encodeURIComponent(
-          item,
-        )}">${item}</a></li>`,
+        `<li><a href="product?catid=${typeIdMap[item] || ''}">${item}</a></li>`,
     )
     .join('');
 
   return `
     <li class="modal-sub-dropdown">
       <div class="modal-sub-toggle">
-        <a href="product.html?category=${encodeURIComponent(
-          category,
-        )}">${category}</a>
+        <span>${category}</span>
         <span class="modal-toggle-icon">+</span>
       </div>
       <ul class="modal-sub-sub-menu">${subList}</ul>
@@ -181,6 +196,18 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.more-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       increaseCartCount();
+    });
+  });
+
+  // ✅ Thêm chức năng cho icon kính lúp trong các section khác
+  document.querySelectorAll('.zoom-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const productId = btn.getAttribute('data-product-id');
+      if (productId) {
+        // Chuyển đến trang chi tiết sản phẩm với URL đơn giản
+        window.location.href = `product-detail/${productId}`;
+      }
     });
   });
 });

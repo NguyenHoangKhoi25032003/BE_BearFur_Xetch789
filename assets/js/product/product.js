@@ -1,4 +1,3 @@
-
 document.querySelectorAll('.category-header').forEach(header => {
     header.addEventListener('click', () => {
         const parent = header.parentElement;
@@ -63,5 +62,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     updateSelectedTags(); // init
+
+    // ✅ Thêm chức năng chuyển đến trang chi tiết sản phẩm khi bấm icon kính lúp
+    document.querySelectorAll('.icon-btn').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const title = btn.getAttribute('title');
+            if (title === 'Xem chi tiết' || title === 'Xem nhanh') {
+                // Ưu tiên lấy product ID từ button trước
+                let productId = btn.getAttribute('data-product-id');
+
+                // Nếu không có, thử lấy từ product card
+                if (!productId) {
+                    const productCard = btn.closest('.product-card');
+                    if (productCard) {
+                        productId = productCard.getAttribute('data-product-id');
+                    }
+                }
+
+                if (productId) {
+                    // Chuyển đến trang chi tiết sản phẩm với URL đơn giản
+                    window.location.href = `product-detail/${productId}`;
+                }
+            }
+        });
+    });
 });
 

@@ -506,8 +506,8 @@ $route["rut-tien/lich-su/(:num)"] = "users/users_commission/site_withdrawal_hist
 $route["rut-tien/lich-su"] = "users/users_commission/site_withdrawal_history";
 
 $route["hoa-hong"] = "users/users_commission/site_commission";
-$route["hoa-hong/lich-su/(:num)"] = "users/users_commission/site_commission_history/$1";
-$route["hoa-hong/lich-su"] = "users/users_commission/site_commission_history";
+$route['hoa-hong/lich-su/(:num)'] = "users/users_commission/site_commission_history/$1";
+$route['hoa-hong/lich-su'] = "users/users_commission/site_commission_history";
 
 $route["lich-su-mua-hang/(:num)"] = "users/users_commission/site_buy/$1";
 $route["lich-su-mua-hang"] = "users/users_commission/site_buy";
@@ -556,9 +556,8 @@ $route["(:any)-(:num)"] = "pages/site_details/$1";
 $route['test-bearfur'] = 'layout/test_bearfur';
 
 // Product routes
-// $route['product'] = 'shops/index';
-// $route['product/detail/(:num)'] = 'shops/detail/$1';
-// $route['product/search'] = 'shops/search';
+$route['product'] = 'shops/index';
+$route['product/(:any)'] = 'shops/index';
 
 // API routes
 $route['api/products'] = 'shops/api_products';
@@ -569,9 +568,13 @@ $route['introduce'] = 'pages/introduce';
 $route['tin-tuc'] = 'pages/new';
 $route['contac'] = 'contact/contact/index';
 $route['san-pham'] = 'layout/product';
+$route['san-pham/(:num)'] = 'shops/rows/site_details/$1';
 $route['profile'] = 'users/site_profile';
 $route['orders'] = 'shops/orders/site_history';
 $route['logout'] = 'users/logout';
 $route['search'] = 'shops/search';
 
 $route['he-thong'] = 'layout/system';
+
+// Route hiển thị chi tiết sản phẩm theo alias và id
+$route['product-detail/(:any)-(:num)'] = 'shops/rows/site_details/$2';
